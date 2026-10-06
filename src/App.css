@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 40px 20px;
+  transition: 0.3s ease;
+}
+
+.app.light {
+  background-color: #f4f7fb;
+  color: #222;
+}
+
+.app.dark {
+  background-color: #181818;
+  color: #fff;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card {
+  background-color: #292929;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.info {
+  margin: 8px 0;
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.login-btn {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.increment-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.decrement-btn {
+  background-color: #ffc107;
+  color: #222;
+}
+
+.theme-btn {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.counter {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
+.theme-text {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+.dark hr {
+  border-color: #555;
 }
